@@ -1,16 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-</head>
 
 <body>
     <h1>Hello you are logged in.</h1>
     <a href="{{url_for('logout')}}">Press here to logout</a>
 </body>
 
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humidity Thingy</title>
+    <style media="screen">
+      div {
+        height: 120px;
+        width: 500px;
+        background-image: linear-gradient(90deg, #F5D11C 5.66%, #87a587 52%, #4363FF 94.35%);
+      }
+
+      progress {
+        height:40px;
+        width: 500px;
+
+      }
+    </style>
+
+  </head>
+  <body>
+    
+    <h1>Hello you are logged in.</h1>
+    <a href="{{url_for('logout')}}">Press here to logout</a>
+    
+    {{  }}
+    <script>function timedRefresh(timeoutPeriod) {
+    setTimeout("location.reload(true);",timeoutPeriod);
+    }
+
+    window.onload = timedRefresh(2000);
+  </script>
+
+        <progress max="100" value= {{ humidity }}></progress>
+
+  </body>
 </html>
